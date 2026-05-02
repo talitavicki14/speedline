@@ -1,0 +1,224 @@
+@page {
+    margin: 100px 30px 60px 30px;
+}
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: #1e293b;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    top: -80px;
+    left: 0;
+    right: 0;
+    height: 50px;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 5px;
+}
+
+.header-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.logo-img {
+    height: 30px;
+}
+
+.header-subtitle {
+    text-align: right;
+    font-size: 13px;
+    color: #64748b;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+footer {
+    position: fixed;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    height: 30px;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 8px;
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.footer-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.page-number:after {
+    content: "Halaman " counter(page);
+}
+
+.content {
+    margin-top: 15px;
+}
+
+.report-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #0f172a;
+}
+
+.report-period {
+    font-size: 11px;
+    color: #64748b;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Stats Table */
+.stats-table {
+    width: 100%;
+    margin-bottom: 20px;
+    table-layout: fixed;
+}
+
+.stats-card {
+    background: #f8fafc;
+    padding: 12px 8px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #f1f5f9;
+}
+
+.stats-label {
+    font-size: 8px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-bottom: 4px;
+    height: 18px;
+    display: block;
+}
+
+.stats-value {
+    font-size: 12px;
+    font-weight: bold;
+    color: #0f172a;
+}
+
+/* Charts Table */
+.charts-table {
+    width: 100%;
+    margin-bottom: 25px;
+    table-layout: fixed;
+}
+
+.chart-box {
+    background: #fff;
+    padding: 12px 8px;
+    border: 1px solid #f1f5f9;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.chart-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.pie-chart-img {
+    width: 100%;
+    margin-top: 2px;
+}
+
+.section-title {
+    font-size: 11px;
+    font-weight: bold;
+    color: #0f172a;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #f1f5f9;
+    text-transform: uppercase;
+}
+
+.breakdown-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+.breakdown-table th {
+    background: #f8fafc;
+    text-align: left;
+    font-size: 8px;
+    font-weight: bold;
+    color: #64748b;
+    text-transform: uppercase;
+    padding: 6px 8px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.breakdown-table td {
+    font-size: 10px;
+    padding: 8px 8px;
+    border-bottom: 1px solid #f8fafc;
+    vertical-align: middle;
+}
+
+.breakdown-table .col-name {
+    width: 60%;
+    font-weight: bold;
+    color: #334155;
+}
+
+.breakdown-table .col-qty {
+    width: 25%;
+    text-align: right;
+}
+
+.breakdown-table .col-pct {
+    width: 15%;
+    text-align: right;
+    color: #1e293b;
+    font-weight: bold;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.data-table th {
+    background: #f8fafc;
+    text-align: left;
+    font-size: 9px;
+    font-weight: bold;
+    color: #64748b;
+    text-transform: uppercase;
+    padding: 8px 10px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.data-table td {
+    padding: 8px 10px;
+    font-size: 10px;
+    border-bottom: 1px solid #f8fafc;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.text-success {
+    color: #059669;
+}
