@@ -205,6 +205,7 @@
                 $user = auth()->user();
                 $pendingCount = 0;
                 $lowStockCount = 0;
+                $outStockCount = 0;
                 $confirmedCount = 0;
                 $revenueTrend = null;
                 
@@ -238,7 +239,7 @@
                 }
 
                 $totalNotif = $pendingCount + $lowStockCount + $outStockCount + $confirmedCount + ($revenueTrend ? 1 : 0);
-@endphp
+            @endphp
             <div class="relative">
                 <button id="notifBtn" class="relative text-slate-400 hover:text-slate-700 transition-colors p-1">
                     <i class="fas fa-bell text-sm"></i>
