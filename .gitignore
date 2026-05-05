@@ -22,3 +22,10 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+/nginx
+ansible.cfg
+docker-compose.yml
+inventory*
+talita-playbook*
+Dockerfile

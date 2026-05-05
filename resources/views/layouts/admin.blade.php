@@ -41,7 +41,7 @@
         @if(in_array($userRole, ['admin', 'owner', 'kasir']))
         <p class="text-[10px] font-semibold tracking-widest text-slate-400 uppercase px-3 pb-1.5 pt-4">Operasional</p>
         
-        @if(in_array($userRole, ['admin', 'owner']))
+        @if(in_array($userRole, ['admin', 'owner', 'kasir']))
         <a href="{{ route('admin.bookings.index') }}"
            class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm transition-all {{ request()->routeIs('admin.bookings*') ? 'nav-active' : 'text-slate-500 hover:bg-slate-50 hover:text-slate-800' }}">
             <i class="fas fa-calendar-check w-4 text-center {{ request()->routeIs('admin.bookings*') ? 'text-slate-800' : 'text-slate-400' }}"></i> Booking
