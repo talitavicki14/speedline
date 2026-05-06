@@ -23,7 +23,7 @@
             </div>
             
             <div class="flex items-center gap-2">
-                <button id="exportPdfBtn"
+                <button type="button" id="exportPdfBtn"
                    data-url="{{ route('admin.reports.finance.pdf') }}"
                    data-filename="Laporan_Keuangan_{{ $startDate }}_{{ $endDate }}.pdf"
                    data-total-records="{{ $payments->count() }}"
@@ -31,7 +31,7 @@
                    class="bg-white border border-slate-200 text-slate-700 px-4 py-2.5 rounded-xl text-sm font-semibold hover:bg-slate-50 transition-all flex items-center justify-center gap-2 h-[44px]">
                     <i class="fas fa-file-pdf text-red-500"></i> PDF
                 </button>
-                <button id="exportExcelBtn"
+                <button type="button" id="exportExcelBtn"
                    data-url="{{ route('admin.reports.finance.excel') }}"
                    data-filename="Laporan_Keuangan_{{ $startDate }}_{{ $endDate }}.xlsx"
                    data-total-records="{{ $payments->count() }}"

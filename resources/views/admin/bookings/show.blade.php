@@ -215,25 +215,35 @@
             <div class="px-5 py-4 border-b border-slate-100">
                 <h3 class="font-semibold text-sm text-slate-800">Perbarui Status</h3>
             </div>
-            <div class="p-4 flex gap-2">
-                @if(\Illuminate\Support\Facades\Gate::allows('manage-data') && in_array($role, ['admin','kasir']))
-                <form action="{{ route('admin.bookings.status', $booking) }}" method="POST" class="flex-1"
-                      data-confirm="Apakah Anda yakin ingin membatalkan booking ini?">
-                    @csrf @method('PUT')
-                    <input type="hidden" name="status" value="cancelled">
-                    <button class="w-full py-2 rounded-xl text-sm font-semibold border border-red-200 bg-red-50 text-red-600 hover:bg-red-100 transition-colors">
-                        Batalkan
-                    </button>
-                </form>
-                @endif
-                @if(\Illuminate\Support\Facades\Gate::allows('manage-data') && in_array($role, ['admin','mekanik']))
-                <form action="{{ route('admin.bookings.status', $booking) }}" method="POST" class="flex-1">
-                    @csrf @method('PUT')
-                    <input type="hidden" name="status" value="in_progress">
-                    <button class="w-full py-2 rounded-xl text-sm font-semibold border border-violet-200 bg-violet-50 text-violet-700 hover:bg-violet-100 transition-colors">
-                        Mulai Kerja
-                    </button>
-                </form>
+            <div class="p-4 flex flex-col gap-3">
+                <div class="flex gap-2">
+                    @if(\Illuminate\Support\Facades\Gate::allows('manage-data') && in_array($role, ['admin','kasir']))
+                    <form action="{{ route('admin.bookings.status', $booking) }}" method="POST" class="flex-1"
+                          data-confirm="Apakah Anda yakin ingin membatalkan booking ini?">
+                        @csrf @method('PUT')
+                        <input type="hidden" name="status" value="cancelled">
+                        <button class="w-full py-2 rounded-xl text-sm font-semibold border border-red-200 bg-red-50 text-red-600 hover:bg-red-100 transition-colors">
+                            Batalkan
+                        </button>
+                    </form>
+                    @endif
+                    @if(\Illuminate\Support\Facades\Gate::allows('manage-data') && in_array($role, ['admin','mekanik']))
+                    <form action="{{ route('admin.bookings.status', $booking) }}" method="POST" class="flex-1">
+                        @csrf @method('PUT')
+                        <input type="hidden" name="status" value="in_progress">
+                        <button class="w-full py-2 rounded-xl text-sm font-semibold border border-violet-200 bg-violet-50 text-violet-700 hover:bg-violet-100 transition-colors">
+                            Mulai Kerja
+                        </button>
+                    </form>
+                    @endif
+                </div>
+
+                @if($role === 'kasir')
+                <div class="bg-blue-50 border border-blue-100 rounded-xl p-4 text-center">
+                    <i class="fas fa-tools text-blue-500 text-lg mb-1.5 block"></i>
+                    <p class="text-xs font-semibold text-blue-700">Siap untuk Dikerjakan Mekanik</p>
+                    <p class="text-[10px] text-slate-400 mt-0.5">Booking telah dikonfirmasi. Menunggu mekanik memulai pengerjaan.</p>
+                </div>
                 @endif
             </div>
         </div>
