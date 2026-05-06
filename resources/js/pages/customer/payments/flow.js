@@ -401,7 +401,7 @@ const PaymentFlow = {
                     </div>
                 </div>
                 ${data.deeplink_url ? `
-                <a href="${data.deeplink_url}" class="w-full flex items-center justify-center gap-3 bg-[#00AED6] hover:bg-[#0095B7] text-white font-bold text-sm py-4 rounded-2xl transition-all shadow-lg shadow-blue-100 mb-6">
+                <a href="${data.deeplink_url}" target="_blank" class="w-full flex items-center justify-center gap-3 bg-[#00AED6] hover:bg-[#0095B7] text-white font-bold text-sm py-4 rounded-2xl transition-all shadow-lg shadow-blue-100 mb-6">
                     <i class="fas fa-mobile-alt"></i> Buka ${type === 'gopay' ? 'GoPay' : 'Aplikasi Pembayaran'}
                 </a>` : ''}
                 <p class="text-xs text-slate-400 text-center">Halaman ini akan diperbarui secara otomatis setelah pembayaran dikonfirmasi.</p>`;

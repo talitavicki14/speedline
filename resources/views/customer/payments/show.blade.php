@@ -86,7 +86,7 @@
                     @foreach([['bca','BCA'],['bni','BNI'],['bri','BRI'],['mandiri','Mandiri'],['permata','Permata']] as [$code,$name])
                     <a href="{{ route('customer.payments.pay', [$payment, 'type' => 'bank_transfer', 'bank' => $code]) }}"
                        class="flex items-center justify-center p-6 rounded-xl border border-slate-200 hover:border-slate-900 hover:bg-slate-50 transition-all h-24 group">
-                        <img src="{{ asset('images/payment/' . $code . '.svg') }}" alt="{{ $name }}" class="h-10 w-auto max-w-full object-contain transition-transform group-hover:scale-110">
+                        <img src="{{ asset('images/payment/' . $code . '.svg') }}" alt="{{ $name }}" class="h-10 w-auto max-w-full object-contain">
                     </a>
                     @endforeach
                 </div>
@@ -98,11 +98,11 @@
                 <div class="grid grid-cols-2 gap-3">
                     <a href="{{ route('customer.payments.pay', [$payment, 'type' => 'gopay']) }}"
                        class="flex items-center justify-center p-6 rounded-xl border border-slate-200 hover:border-slate-900 hover:bg-slate-50 transition-all h-24 group">
-                        <img src="{{ asset('images/payment/gopay.svg') }}" alt="GoPay" class="h-10 w-auto max-w-full object-contain transition-transform group-hover:scale-110">
+                        <img src="{{ asset('images/payment/gopay.svg') }}" alt="GoPay" class="h-10 w-auto max-w-full object-contain">
                     </a>
                     <a href="{{ route('customer.payments.pay', [$payment, 'type' => 'qris']) }}"
                        class="flex items-center justify-center p-6 rounded-xl border border-slate-200 hover:border-slate-900 hover:bg-slate-50 transition-all h-24 group">
-                        <img src="{{ asset('images/payment/qris.svg') }}" alt="QRIS" class="h-10 w-auto max-w-full object-contain transition-transform group-hover:scale-110">
+                        <img src="{{ asset('images/payment/qris.svg') }}" alt="QRIS" class="h-10 w-auto max-w-full object-contain">
                     </a>
                 </div>
             </div>
